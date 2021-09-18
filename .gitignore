@@ -1,5 +1,9 @@
 TcpClient/.vs
 TcpClient/out
+TcpClient/build
+TcpClient/.vscode
 TcpServer/.vs
 TcpServer/out
+TcpServer/build
+TcpServer/.vscode
 task.odt

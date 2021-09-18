@@ -14,7 +14,7 @@ TcpClient::TcpClient(std::string ipAddr, std::uint16_t port)
 #ifdef _WIN32
 	isValidIp = inet_pton(AF_INET, &ipAddr[0], &addr.sin_addr.s_addr);
 #else
-	isValidIp = inet_aton(ipAddr.c_str(), &addr.sin_addr.s_addr);
+	isValidIp = inet_aton(ipAddr.c_str(), &addr.sin_addr);
 #endif
 	if (!isValidIp)
 		throw std::invalid_argument("IP is not valid");

@@ -7,8 +7,10 @@ if(WIN32)
 find_library(ws2_32_LIBRARY_PATH ws2_32)
 endif()
 
-add_executable (TcpServer "TcpServer.cpp" "TcpServer.h" "Socket.h" "Socket.cpp" "Asn1.h" "Asn1.cpp")
+add_executable (TcpServer "TcpServer.cpp" "TcpServer.h" "Socket.cpp" "Socket.h" "Asn1.cpp" "Asn1.h")
 
 if (WIN32)
 target_link_libraries(TcpServer ${ws2_32_LIBRARY_PATH})
+else()
+target_link_libraries(TcpServer pthread)
 endif()

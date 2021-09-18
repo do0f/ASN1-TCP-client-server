@@ -2,6 +2,7 @@
 #include <cstddef>
 #include <vector>
 #include <cmath>
+#include <stdexcept>
 
 namespace asn1 {
 	//checks if 8'th bit is set

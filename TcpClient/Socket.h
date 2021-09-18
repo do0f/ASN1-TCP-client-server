@@ -6,11 +6,16 @@
 #include <iterator>
 
 #ifdef  _WIN32
-#include <Winsock2.h>
+	#include <Winsock2.h>
 #else //  *nix
-#include <sys/types.h>
-#include <sys/socket.h>
-
+	#include <sys/types.h>
+	#include <sys/socket.h>
+	#include <netinet/in.h>
+	#include <netinet/tcp.h>
+    #include <unistd.h>
+	//macros for windows compatibility
+	#define SOCKET_ERROR -1
+	#define INVALID_SOCKET -1
 #endif
 
 #include "Asn1.h"
